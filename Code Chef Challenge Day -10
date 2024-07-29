@@ -1,0 +1,1161 @@
+01)Chef gives Party
+Chef wants to give a burger party to all his 
+𝑁
+N friends i.e. he wants to buy one burger for each of his friends.
+
+The cost of each burger is 
+𝑋
+X rupees while Chef has a total of 
+𝐾
+K rupees.
+
+Determine whether he has enough money to buy a burger for each of his friends or not.
+
+Input Format
+The first line contains a single integer 
+𝑇
+T - the number of test cases. Then the test cases follow.
+The first and only line of each test case contains the three integers 
+𝑁
+N, 
+𝑋
+X, and 
+𝐾
+K - the number of Chef's friends, the cost of each burger, and the total money Chef has, respectively.
+Output Format
+For each test case, output YES if the Chef can give a party to all his 
+𝑁
+N friends. Otherwise, output NO.
+
+You may print each character of YES and NO in uppercase or lowercase (for example, yes, yEs, Yes will be considered identical).
+
+Constraints
+1
+≤
+𝑇
+≤
+1000
+1≤T≤1000
+1
+≤
+𝑁
+,
+𝑋
+≤
+100
+1≤N,X≤100
+1
+≤
+𝐾
+≤
+10000
+1≤K≤10000
+Sample 1:
+Input
+Output
+4
+5 10 70
+5 10 40
+10 40 400
+14 14 150
+YES
+NO
+YES
+NO
+Explanation:
+Test case 
+1
+1: Chef has 
+5
+5 friends. The cost of buying a burger for each of them will be 
+10
+×
+5
+=
+50
+10×5=50 while Chef has 
+70
+70 rupees. Therefore, he can buy a burger for all of them.
+
+Test case 
+2
+2: Chef has 
+5
+5 friends. The cost of buying a burger for each of them will be 
+10
+×
+5
+=
+50
+10×5=50 while Chef has 
+40
+40 rupees. Therefore, he can not buy a burger for all of them.
+
+Test case 
+3
+3: Chef has 
+10
+10 friends. The cost of buying a burger for each of them will be 
+40
+×
+10
+=
+400
+40×10=400 and Chef has 
+400
+400 rupees. Therefore, he can buy a burger for all of them.
+
+Test case 
+4
+4: Chef has 
+14
+14 friends. The cost of buying a burger for each of them will be 
+14
+×
+14
+=
+196
+14×14=196 while Chef has 
+150
+150 rupees. Therefore, he can not buy a burger for all of them.
+
+ANSWER:
+for _ in range(int(input())):
+    n,x,k = map(int,input().split())
+    if n*x <= k:
+        print('yes')
+    else:
+        print('no')
+02)Time Complexity
+A sorting algorithm 
+𝐴
+A is said to have more time complexity than a sorting algorithm 
+𝐵
+B if it uses more number of comparisons for sorting the same array than algorithm 
+𝐵
+B.
+
+Given that algorithm 
+𝐴
+A uses 
+𝑋
+X comparisons to sort an array and algorithm 
+𝐵
+B uses 
+𝑌
+Y comparisons to sort the same array, find whether algorithm 
+𝐴
+A has more time complexity.
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+Each test case consists of two space-separated integers 
+𝑋
+X and 
+𝑌
+Y — the number of comparisons used by algorithms 
+𝐴
+A and 
+𝐵
+B to sort the array respectively.
+Output Format
+For each test case, output on a new line, YES, if the algorithm 
+𝐴
+A has more time complexity than 
+𝐵
+B and NO otherwise.
+
+You may print each character of the string in uppercase or lowercase (for example, the strings YES, yEs, yes, and yeS will all be treated as identical).
+
+Constraints
+1
+≤
+𝑇
+≤
+100
+1≤T≤100
+1
+≤
+𝑋
+,
+𝑌
+≤
+100
+1≤X,Y≤100
+Sample 1:
+Input
+Output
+4
+9 9
+15 7
+10 19
+21 20
+NO
+YES
+NO
+YES
+Explanation:
+Test case 
+1
+1: The number of comparisons used by algorithm 
+𝐴
+A is 
+9
+9 and that used by 
+𝐵
+B is also 
+9
+9. Since the number of comparisons used by 
+𝐴
+A is not more than that of 
+𝐵
+B, 
+𝐴
+A does not have more time complexity than 
+𝐵
+B.
+
+Test case 
+2
+2: The number of comparisons used by algorithm 
+𝐴
+A is 
+15
+15 and that used by 
+𝐵
+B is 
+7
+7. Since the number of comparisons used by 
+𝐴
+A is more than that of 
+𝐵
+B, 
+𝐴
+A does have more time complexity than 
+𝐵
+B.
+
+Test case 
+3
+3: The number of comparisons used by algorithm 
+𝐴
+A is 
+10
+10 and that used by 
+𝐵
+B is 
+19
+19. Since the number of comparisons used by 
+𝐴
+A is not more than that of 
+𝐵
+B, 
+𝐴
+A does not have more time complexity than 
+𝐵
+B.
+
+Test case 
+4
+4: The number of comparisons used by algorithm 
+𝐴
+A is 
+21
+21 and that used by 
+𝐵
+B is 
+20
+20. Since the number of comparisons used by 
+𝐴
+A is more than that of 
+𝐵
+B, 
+𝐴
+A does have more time complexity than 
+𝐵
+B.
+ANSWER:
+for _ in range(int(input())):
+    n,x,k = map(int,input().split())
+    if n*x <= k:
+        print('yes')
+    else:
+        print('no')
+03)Interior Design
+Chef decided to redecorate his house, and now needs to decide between two different styles of interior design.
+
+For the first style, tiling the floor will cost 
+𝑋
+1
+X 
+1
+​
+  rupees and painting the walls will cost 
+𝑌
+1
+Y 
+1
+​
+  rupees.
+
+For the second style, tiling the floor will cost 
+𝑋
+2
+X 
+2
+​
+  rupees and painting the walls will cost 
+𝑌
+2
+Y 
+2
+​
+  rupees.
+
+Chef will choose whichever style has the lower total cost. How much will Chef pay for his interior design?
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+Each test case consists of a single line of input, containing 
+4
+4 space-separated integers 
+𝑋
+1
+,
+𝑌
+1
+,
+𝑋
+2
+,
+𝑌
+2
+X 
+1
+​
+ ,Y 
+1
+​
+ ,X 
+2
+​
+ ,Y 
+2
+​
+  as described in the statement.
+Output Format
+For each test case, output on a new line the amount Chef will pay for interior design.
+
+Constraints
+1
+≤
+𝑇
+≤
+100
+1≤T≤100
+1
+≤
+𝑋
+1
+,
+𝑌
+1
+,
+𝑋
+2
+,
+𝑌
+2
+≤
+100
+1≤X 
+1
+​
+ ,Y 
+1
+​
+ ,X 
+2
+​
+ ,Y 
+2
+​
+ ≤100
+Sample 1:
+Input
+Output
+4
+10 20 9 25
+10 20 9 20
+10 20 20 10
+100 43 85 61
+30
+29
+30
+143
+Explanation:
+Test case 
+1
+1: The first style costs 
+10
++
+20
+=
+30
+10+20=30 rupees, and the second costs 
+9
++
+25
+=
+34
+9+25=34 rupees. The first is cheaper, so Chef will pay 
+30
+30 rupees.
+
+Test case 
+2
+2: The first style costs 
+10
++
+20
+=
+30
+10+20=30 rupees, and the second costs 
+9
++
+20
+=
+29
+9+20=29 rupees. The second is cheaper, so Chef will pay 
+29
+29 rupees.
+
+Test case 
+3
+3: The first style costs 
+10
++
+20
+=
+30
+10+20=30 rupees, and the second costs 
+20
++
+10
+=
+30
+20+10=30 rupees. Both styles cost the same, so Chef is always going to pay 
+30
+30 rupees.
+
+Test case 
+4
+4: The first style costs 
+100
++
+43
+=
+143
+100+43=143 rupees, and the second costs 
+85
++
+61
+=
+146
+85+61=146 rupees. The first is cheaper, so Chef will pay 
+143
+143 rupees.
+ANSWER:
+for i in range(int(input())):
+    a,b,c,d=map(int,input().split())
+    print(min(a+b,c+d))
+
+04)Car Trip
+Chef rented a car for a day.
+
+Usually, the cost of the car is Rs 
+10
+10 per km. However, since Chef has booked the car for the whole day, he needs to pay for at least 
+300
+300 kms even if the car runs less than 
+300
+300 kms.
+
+If the car ran 
+𝑋
+X kms, determine the cost Chef needs to pay.
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+Each test case consists of a single integer 
+𝑋
+X - denoting the number of kms Chef travelled.
+Output Format
+For each test case, output the cost Chef needs to pay.
+
+Constraints
+1
+≤
+𝑇
+≤
+100
+1≤T≤100
+1
+≤
+𝑋
+≤
+1000
+1≤X≤1000
+Sample 1:
+Input
+Output
+5
+800
+3
+299
+301
+300
+8000
+3000
+3000
+3010
+3000
+Explanation:
+Test case 
+1
+1: The car runs for 
+800
+800 kms. Thus, he needs to pay 
+800
+⋅
+10
+=
+8000
+800⋅10=8000 rupees.
+
+Test case 
+2
+2: The car runs for 
+3
+3 kms. However, since Chef booked the car for whole day, he needs to pay for at least 
+300
+300 kms. Thus, he needs to pay 
+300
+⋅
+10
+=
+3000
+300⋅10=3000 rupees.
+
+Test case 
+3
+3: The car runs for 
+299
+299 kms. However, since Chef booked the car for whole day, he needs to pay for at least 
+300
+300 kms. Thus, he needs to pay 
+300
+⋅
+10
+=
+3000
+300⋅10=3000 rupees.
+
+Test case 
+4
+4: The car runs for 
+301
+301 kms. Thus, he needs to pay 
+301
+⋅
+10
+=
+3010
+301⋅10=3010 rupees.
+
+Test case 
+5
+5: The car runs for 
+300
+300 kms. Thus, he needs to pay 
+300
+⋅
+10
+=
+3000
+300⋅10=3000 rupees.
+
+ANSWER:
+t=int(input())
+for j in range(t):
+    x=int(input())
+    if x<=300:
+        print(3000)
+    else:
+        print(x*10)
+  05)Multivitamin Tablets
+The doctor prescribed Chef to take a multivitamin tablet 
+3
+3 times a day for the next 
+𝑋
+X days.
+
+Chef already has 
+𝑌
+Y multivitamin tablets.
+
+Determine if Chef has enough tablets for these 
+𝑋
+X days or not.
+
+Input Format
+The first line contains a single integer 
+𝑇
+T — the number of test cases. Then the test cases follow.
+The first and only line of each test case contains two space-separated integers 
+𝑋
+X and 
+𝑌
+Y — the number of days Chef needs to take tablets and the number of tablets Chef already has.
+Output Format
+For each test case, output YES if Chef has enough tablets for these 
+𝑋
+X days. Otherwise, output NO.
+
+You may print each character of YES and NO in uppercase or lowercase (for example, yes, yEs, Yes will be considered identical).
+
+Constraints
+1
+≤
+𝑇
+≤
+2000
+1≤T≤2000
+1
+≤
+𝑋
+≤
+100
+1≤X≤100
+0
+≤
+𝑌
+≤
+1000
+0≤Y≤1000
+Sample 1:
+Input
+Output
+4
+1 10
+12 0
+10 29
+10 30
+YES
+NO
+NO
+YES
+Explanation:
+Test Case 1: Chef has 
+10
+10 tablets and Chef needs 
+3
+3 tablets for 
+1
+1 day. Therefore Chef has enough tablets.
+
+Test Case 2: Chef has 
+0
+0 tablets and Chef needs 
+36
+36 tablets for 
+12
+12 days. Therefore Chef does not have enough tablets.
+
+Test Case 3: Chef has 
+29
+29 tablets and Chef needs 
+30
+30 tablets for 
+10
+10 days. Therefore Chef does not have enough tablets.
+
+Test Case 4: Chef has 
+30
+30 tablets and Chef needs 
+30
+30 tablets for 
+10
+10 days. Therefore Chef has enough tablets.
+
+ANSWER:
+for _ in range(int(input())):
+    n,x,k = map(int,input().split())
+    if n*x <= k:
+        print('yes')
+    else:
+        print('no')
+06)Six Friends
+Six friends go on a trip and are looking for accommodation. After looking for hours, they find a hotel which offers two types of rooms — double rooms and triple rooms. A double room costs Rs. 
+𝑋
+X, while a triple room costs Rs. 
+𝑌
+Y.
+
+The friends can either get three double rooms or get two triple rooms. Find the minimum amount they will have to pay to accommodate all six of them.
+
+Input Format
+The first line contains a single integer 
+𝑇
+T - the number of test cases. Then the test cases follow.
+The first and only line of each test case contains two integers 
+𝑋
+X and 
+𝑌
+Y - the cost of a double room and the cost of a triple room.
+Output Format
+For each testcase, output the minimum amount required to accommodate all the six friends.
+
+Constraints
+1
+≤
+𝑇
+≤
+100
+1≤T≤100
+1
+≤
+𝑋
+<
+𝑌
+≤
+100
+1≤X<Y≤100
+Sample 1:
+Input
+Output
+3
+10 15
+6 8
+4 8
+30
+16
+12
+Explanation:
+Test case 1: The friends can take three double rooms and thus pay a total of Rs. 
+30
+30.
+
+Test case 2: The friends can take two triple rooms and thus pay a total of Rs. 
+16
+16.
+
+Test case 3: The friends can take three double rooms and thus pay a total of Rs. 
+12
+12.
+
+ANSWER:
+for _ in range(int(input())):
+    n,x,k = map(int,input().split())
+    if n*x <= k:
+        print('yes')
+    else:
+        print('no')
+07)Chef and Wire Frames
+Chef has a rectangular plate of length 
+𝑁
+𝑐
+𝑚
+Ncm and width 
+𝑀
+𝑐
+𝑚
+Mcm. He wants to make a wireframe around the plate. The wireframe costs 
+𝑋
+X rupees per cm.
+
+Determine the cost Chef needs to incur to buy the wireframe.
+
+Input Format
+First line will contain 
+𝑇
+T, the number of test cases. Then the test cases follow.
+Each test case consists of a single line of input, containing three space-separated integers 
+𝑁
+,
+𝑀
+,
+N,M, and 
+𝑋
+X — the length of the plate, width of the plate, and the cost of frame per cm.
+Output Format
+For each test case, output in a single line, the price Chef needs to pay for the wireframe.
+
+Constraints
+1
+≤
+𝑇
+≤
+1000
+1≤T≤1000
+1
+≤
+𝑁
+,
+𝑀
+,
+𝑋
+≤
+1000
+1≤N,M,X≤1000
+Sample 1:
+Input
+Output
+3
+10 10 10
+23 3 12
+1000 1000 1000
+400
+624
+4000000
+Explanation:
+Test case 
+1
+1: The total length of the frame is 
+2
+⋅
+10
++
+2
+⋅
+10
+=
+40
+2⋅10+2⋅10=40 cms. Since the cost is 
+10
+10 per cm, the total cost would be 
+10
+⋅
+40
+=
+400
+10⋅40=400.
+
+Test case 
+2
+2: The total length of the frame is 
+2
+⋅
+23
++
+2
+⋅
+3
+=
+52
+2⋅23+2⋅3=52 cms. Since the cost is 
+12
+12 per cm, the total cost would be 
+52
+⋅
+12
+=
+624
+52⋅12=624.
+
+Test case 
+3
+3: The total length of the frame is 
+2
+⋅
+1000
++
+2
+⋅
+1000
+=
+4000
+2⋅1000+2⋅1000=4000 cms. Since the cost is 
+1000
+1000 per cm, the total cost would be 
+4000
+⋅
+1000
+=
+4000000
+4000⋅1000=4000000.
+
+ANSWER:
+for i in range(int(input())):
+    a,b,c=map(int,input().split())
+    print(c*((2*a)+(2*b)))
+
+08)Minimum Coins
+There are only 
+2
+2 type of denominations in Chefland:
+
+Coins worth 
+1
+1 rupee each
+Notes worth 
+10
+10 rupees each
+Chef wants to pay his friend exactly 
+𝑋
+X rupees. What is the minimum number of coins Chef needs to pay exactly 
+𝑋
+X rupees?
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+Each test case consists of a single line of input containing a single integer 
+𝑋
+X.
+Output Format
+For each test case, output on a new line the minimum number of coins Chef needs to pay exactly 
+𝑋
+X rupees.
+
+Constraints
+1
+≤
+𝑇
+≤
+1000
+1≤T≤1000
+1
+≤
+𝑋
+≤
+1000
+1≤X≤1000
+Sample 1:
+Input
+Output
+4
+53
+100
+9
+11
+3
+0
+9
+1
+Explanation:
+Test case 
+1
+1: Chef can use 
+5
+5 notes and 
+3
+3 coins in the optimal case.
+
+Test case 
+2
+2: Chef can use 
+10
+10 notes and 
+0
+0 coins in the optimal case.
+
+Test case 
+3
+3: Chef can only use 
+9
+9 coins.
+
+Test case 
+4
+4: Chef can use 
+1
+1 note and 
+1
+1 coin in the optimal case.
+
+ANSWER:
+t=int(input())
+for i in range(t):
+    x=int(input())
+    a=x%10
+    print(a)
+
+09)Spice Level
+Each item in Chef’s menu is assigned a spice level from 
+1
+1 to 
+10
+10. Based on the spice level, the item is categorised as:
+
+MILD: If the spice level is less than 
+4
+4.
+MEDIUM: If the spice level is greater than equal to 
+4
+4 but less than 
+7
+7.
+HOT: If the spice level is greater than equal to 
+7
+7.
+Given that the spice level of an item is 
+𝑋
+X, find the category it lies in.
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+Each test case consists of an integer 
+𝑋
+X — the spice level of the item.
+Output Format
+For each test case, output on a new line, the category that the item lies in.
+
+You may print each character in uppercase or lowercase. For example, HOT, hot, Hot, and hOT are all considered the same.
+
+Constraints
+1
+≤
+𝑇
+≤
+1000
+1≤T≤1000
+1
+≤
+𝑋
+≤
+10
+1≤X≤10
+Sample 1:
+Input
+Output
+4
+4
+1
+6
+9
+MEDIUM
+MILD
+MEDIUM
+HOT
+Explanation:
+Test case 
+1
+1: The spice level is greater than 
+4
+4 but less than 
+7
+7. Thus, it is in MEDIUM category.
+
+Test case 
+2
+2: The spice level is less than 
+4
+4. Thus, it is in MILD category.
+
+Test case 
+3
+3: The spice level is greater than 
+4
+4 but less than 
+7
+7. Thus, it is in MEDIUM category.
+
+Test case 
+4
+4: The spice level is greater than 
+7
+7. Thus, it is in HOT category.
+
+ANSWER:
+or _ in range(int(input())):
+    n,x,k = map(int,input().split())
+    if n*x <= k:
+        print('yes')
+    else:
+        print('no')
+10)The Gift
+Om has 
+𝑋
+X rupees. He wants to gift a laptop worth 
+𝑁
+N rupees to his girlfriend.
+
+We know that Om is the technical secretary of IIIT-A and has access to the Gymkhana funds of IIIT-A. Currently there are 
+𝑀
+M rupees in the fund and Om can use the fund as much as he wants.
+
+Find whether Om can gift his girlfriend a new laptop.
+
+Input Format
+The first and only line of input contains three space-separated integers 
+𝑋
+X, 
+𝑁
+N, and 
+𝑀
+M — the amount Om has, the price of the laptop, and the amount present in the Gymkhana fund respectively.
+Output Format
+For each input, output YES if Om can buy the laptop and NO otherwise.
+
+You may print each character in uppercase or lowercase. For example YES, Yes, yes, and yES are all considered the same.
+
+Constraints
+1
+≤
+𝑋
+,
+𝑁
+,
+𝑀
+≤
+1
+0
+3
+1≤X,N,M≤10 
+3
+ 
+Sample 1:
+Input
+Output
+5 10 15
+YES
+Explanation:
+Om uses 
+5
+5 rupees from Gymkhana fund. So, the amount he has is 
+5
++
+5
+=
+10
+5+5=10 rupees. He can buy the laptop with cost 
+10
+10 rupees.
+
+Sample 2:
+Input
+Output
+4 50 7
+NO
+Explanation:
+Even if Om uses the whole Gymkhana fund, he won't be able to buy the laptop.
+
+ANSWER:
+x,n,m=map(int,input().split())
+if (x+m)>=n:
+    print('YES')
+else:
+    print('NO')
+    
+
+
